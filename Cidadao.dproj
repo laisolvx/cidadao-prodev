@@ -43,11 +43,11 @@
 			<DelphiCompile Include="Cidadao.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="Y:\DELPHI-LIB\Grupo Recursos 2010\Formulario\uTelaPadrao01.pas">
-				<Form>FTelaPadrao01</Form>
-			</DCCReference>
 			<DCCReference Include="uCidadao.pas">
-				<Form>FCidadao</Form>
+				<Form>Cidadao</Form>
+			</DCCReference>
+			<DCCReference Include="C:\DELPHI-LIB\Grupo Recursos 2010\Formulario\uTelaPadrao01.pas">
+				<Form>FTelaPadrao01</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>

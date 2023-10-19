@@ -1,4 +1,3 @@
-
 //Gerar exe
 program Cidadao;
 
@@ -30,6 +29,8 @@ begin
 
   Application.Run;
 end.
+
+
 
 
 //Gerar dll
@@ -83,4 +84,5 @@ begin
   DllApplication:=Application;
   DLLProc := @DLLUnloadProc;
 end.
+
 

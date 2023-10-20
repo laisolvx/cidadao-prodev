@@ -84,9 +84,11 @@ type
    //procedure sCombo_Box2Change(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
     procedure sCombo_Box2Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure Carregar_grid_monitoramento;
     procedure carregar_combo_box;
+    procedure carregar_combo_box_id_motivo;
 
 
     { Private declarations }
@@ -115,7 +117,11 @@ begin
   Sp_Stored.Parameters.ParamByName('@DATA_NASCIMENTO').Value :=  sEdit_Text3.Text;
   Sp_Stored.Parameters.ParamByName('@BAIRRO').Value := sEdit_Text4.Text;
   Sp_Stored.ExecProc;
+
+
   ShowMessage('Cadastrado com sucesso!');
+
+
 end;
 
 
@@ -127,7 +133,7 @@ begin
   Sp_Stored.ProcedureName := 'STB_CADASTRO_SOLICITACAO';
   Sp_Stored.Parameters.Refresh;
 
- Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
+ //Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
   Sp_Stored.Parameters.ParamByName('@CPF_AGENTE').Value := sEdit_Text11.Text;
   Sp_Stored.Parameters.ParamByName('@TIPO_SOLICITACAO').Value := sEdit_Text7.Text;
   Sp_Stored.Parameters.ParamByName('@OBSERVACAO').Value := Memo2.Text;
@@ -179,10 +185,22 @@ end;
 
 
 
+procedure TFCidadao.Button1Click(Sender: TObject);
+begin
+  inherited;
+
+   Sp_Stored.Close;
+  Sp_Stored.ProcedureName := 'STB_CADASTRO_MOTIVOS';
+  Sp_Stored.Parameters.Refresh;
+
+  Sp_Stored.Parameters.ParamByName('@DESCRICAO_MOTIVO').Value := Memo3.Text;
+  Sp_Stored.ExecProc;
+
+end;
+
 procedure TFCidadao.carregar_combo_box;
 begin
   inherited;
-       sCombo_Box1.Clear;
        sCombo_Box2.Clear;
 
 
@@ -196,12 +214,10 @@ begin
                                // propriedade é um boolean q quando é igual a true significa que o DataSet está posicionado no final
 begin
 
-    sCombo_Box1.Items.Add(Sp_Stored.FieldByName('ID_MOTIVO').AsString);
     sCombo_Box2.Items.Add(Sp_Stored.FieldByName('ID_SOLICITACAO').AsString);
     Sp_Stored.Next;
 
 end;
- sCombo_Box1.ItemIndex := -1;
  sCombo_Box2.ItemIndex := -1;
 end;
 
@@ -209,8 +225,34 @@ procedure TFCidadao.FormShow(Sender: TObject);
 begin
   inherited;
     carregar_combo_box();
+    carregar_combo_box_id_motivo();
     Carregar_grid_monitoramento();
     PageControl2.ActivePageIndex := 0;
+end;
+
+
+procedure TFCidadao.carregar_combo_box_id_motivo;
+begin
+  inherited;
+
+      sCombo_Box1.Clear;
+
+
+    Sp_Stored.Close;
+    Sp_Stored.ProcedureName:='stb_id_motivo';
+
+    Sp_Stored.Parameters.Refresh;
+    Sp_Stored.Open;
+
+    while not Sp_Stored.Eof do  // enquanto não chegou ao fim, processa
+                               // propriedade é um boolean q quando é igual a true significa que o DataSet está posicionado no final
+begin
+
+    sCombo_Box1.Items.Add(Sp_Stored.FieldByName('ID_MOTIVO').AsString);
+    Sp_Stored.Next;
+
+end;
+ sCombo_Box1.ItemIndex := -1;
 end;
 
 

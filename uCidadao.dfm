@@ -3,6 +3,7 @@ inherited FCidadao: TFCidadao
   ClientWidth = 1043
   OnShow = FormShow
   ExplicitWidth = 1049
+  ExplicitHeight = 580
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage
@@ -20,7 +21,10 @@ inherited FCidadao: TFCidadao
       end
     end
     inherited Texto: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 6
       ExplicitWidth = 1035
+      ExplicitHeight = 465
       inherited ScrollBox1: TScrollBox
         Width = 1035
         ExplicitWidth = 1035
@@ -29,7 +33,7 @@ inherited FCidadao: TFCidadao
           Top = 72
           Width = 750
           Height = 342
-          ActivePage = TabSheet6
+          ActivePage = TabSheet2
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'
@@ -640,6 +644,7 @@ inherited FCidadao: TFCidadao
               Font.Style = []
               ParentFont = False
               TabOrder = 0
+              OnClick = Button1Click
             end
             object Memo3: TMemo
               Left = 40

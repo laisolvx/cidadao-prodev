@@ -76,6 +76,9 @@ type
     Label25: TLabel;
     Label26: TLabel;
     ADO_LOCALIZAR: TADOQuery;
+    Label27: TLabel;
+    Label28: TLabel;
+    sCombo_Box3: TsCombo_Box;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
@@ -133,9 +136,14 @@ begin
   Sp_Stored.ProcedureName := 'STB_CADASTRO_SOLICITACAO';
   Sp_Stored.Parameters.Refresh;
 
+<<<<<<< HEAD
  //Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
+=======
+  Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
+>>>>>>> release/1.1
   Sp_Stored.Parameters.ParamByName('@CPF_AGENTE').Value := sEdit_Text11.Text;
   Sp_Stored.Parameters.ParamByName('@TIPO_SOLICITACAO').Value := sEdit_Text7.Text;
+  Sp_Stored.Parameters.ParamByName('@STATUS').Value := sCombo_Box3.Text;
   Sp_Stored.Parameters.ParamByName('@OBSERVACAO').Value := Memo2.Text;
   Sp_Stored.Parameters.ParamByName('@DATA_SOLICITACAO').Value := sEdit_Text9.Text;
 
@@ -196,6 +204,13 @@ begin
   Sp_Stored.Parameters.ParamByName('@DESCRICAO_MOTIVO').Value := Memo3.Text;
   Sp_Stored.ExecProc;
 
+<<<<<<< HEAD
+=======
+  ShowMessage('Motivo cadastrado com sucesso!');
+
+  carregar_combo_box_id_motivo();
+
+>>>>>>> release/1.1
 end;
 
 procedure TFCidadao.carregar_combo_box;
@@ -235,9 +250,13 @@ procedure TFCidadao.carregar_combo_box_id_motivo;
 begin
   inherited;
 
+<<<<<<< HEAD
       sCombo_Box1.Clear;
 
 
+=======
+    sCombo_Box1.Clear;
+>>>>>>> release/1.1
     Sp_Stored.Close;
     Sp_Stored.ProcedureName:='stb_id_motivo';
 

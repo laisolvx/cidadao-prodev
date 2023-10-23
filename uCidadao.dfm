@@ -1,22 +1,30 @@
 inherited FCidadao: TFCidadao
   Caption = 'FCidadao'
-  ClientWidth = 1043
+  ClientHeight = 507
+  ClientWidth = 805
   OnShow = FormShow
+<<<<<<< HEAD
   ExplicitWidth = 1049
   ExplicitHeight = 580
+=======
+  ExplicitWidth = 811
+  ExplicitHeight = 536
+>>>>>>> release/1.1
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage
-    Width = 1043
+    Width = 805
     ExplicitWidth = 1205
   end
   inherited PageControl1: TPageControl
-    Width = 1043
+    Width = 805
+    Height = 431
     ExplicitWidth = 1043
     inherited Localizar: TTabSheet
       ExplicitWidth = 1035
       inherited sFrameBar1: TsFrameBar
-        Width = 1035
+        Width = 797
+        Height = 421
         ExplicitWidth = 1035
       end
     end
@@ -26,14 +34,19 @@ inherited FCidadao: TFCidadao
       ExplicitWidth = 1035
       ExplicitHeight = 465
       inherited ScrollBox1: TScrollBox
-        Width = 1035
+        Width = 797
+        Height = 421
         ExplicitWidth = 1035
         object PageControl2: TPageControl
           Left = 6
           Top = 72
           Width = 750
           Height = 342
+<<<<<<< HEAD
           ActivePage = TabSheet2
+=======
+          ActivePage = TabSheet1
+>>>>>>> release/1.1
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'
@@ -325,8 +338,8 @@ inherited FCidadao: TFCidadao
               ZZ_ParametroDLLSaidaItem = 0
             end
             object BitBtn1: TBitBtn
-              Left = 331
-              Top = 264
+              Left = 262
+              Top = 256
               Width = 189
               Height = 33
               Caption = 'Cadastrar'
@@ -345,6 +358,7 @@ inherited FCidadao: TFCidadao
           object TabSheet2: TTabSheet
             Caption = 'Cadastro de Solicita'#231#227'o'
             ImageIndex = 1
+            ExplicitLeft = 0
             object Label9: TLabel
               Left = 191
               Top = 13
@@ -404,6 +418,19 @@ inherited FCidadao: TFCidadao
               Width = 73
               Height = 16
               Caption = 'Observa'#231#245'es'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+            end
+            object Label28: TLabel
+              Left = 40
+              Top = 234
+              Width = 36
+              Height = 16
+              Caption = 'Status'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clWindowText
               Font.Height = -13
@@ -504,8 +531,8 @@ inherited FCidadao: TFCidadao
               TabOrder = 2
             end
             object BitBtn2: TBitBtn
-              Left = 136
-              Top = 256
+              Left = 202
+              Top = 248
               Width = 189
               Height = 33
               Caption = 'Cadastrar'
@@ -584,6 +611,49 @@ inherited FCidadao: TFCidadao
               ZZ_RequeridoSair = False
               ZZ_NomeChave = 'ID_MOTIVO'
               ZZ_Titulo = 'ID_MOTIVO'
+              ZZ_RequeridoGravar = False
+              ZZ_OrdemChave = 0
+              ZZ_Indice = False
+              ZZ_DesabilitarSair = False
+              ZZ_CampoTabela = True
+              ZZ_LimpaCampo = True
+              ZZ_CampoProtegido = False
+              ZZ_AnulaEventos = False
+              ZZ_OrdemEditarOnExit = 0
+              ZZ_AnulaDBEnter = False
+              ZZ_ParametroRPT = False
+              ZZ_ParametroRPTItem = 0
+              ZZ_ParametroDLLEntrada = False
+              ZZ_ParametroDLLEntradaItem = 0
+              ZZ_ParametroDLLSaida = False
+              ZZ_ParametroDLLSaidaItem = 0
+            end
+            object sCombo_Box3: TsCombo_Box
+              Left = 40
+              Top = 256
+              Width = 145
+              Height = 21
+              Alignment = taLeftJustify
+              BoundLabel.Indent = 0
+              BoundLabel.Font.Charset = DEFAULT_CHARSET
+              BoundLabel.Font.Color = clWindowText
+              BoundLabel.Font.Height = -11
+              BoundLabel.Font.Name = 'Tahoma'
+              BoundLabel.Font.Style = []
+              BoundLabel.Layout = sclLeft
+              BoundLabel.MaxWidth = 0
+              BoundLabel.UseSkinColor = True
+              SkinData.SkinSection = 'COMBOBOX'
+              ItemIndex = -1
+              TabOrder = 6
+              Items.Strings = (
+                'ATENDIDO'
+                'PENDENTE')
+              AboutVersaoAutor = #174'2010/v2.0 por J'#250'nior'
+              ZZ_NomeCampo = 'STATUS'
+              ZZ_RequeridoSair = False
+              ZZ_NomeChave = 'STATUS'
+              ZZ_Titulo = 'STATUS'
               ZZ_RequeridoGravar = False
               ZZ_OrdemChave = 0
               ZZ_Indice = False
@@ -919,6 +989,19 @@ inherited FCidadao: TFCidadao
               Height = 13
               Caption = 'Data da Solicita'#231#227'o'
             end
+            object Label27: TLabel
+              Left = 230
+              Top = 11
+              Width = 147
+              Height = 23
+              Caption = 'Fechar solicita'#231#227'o'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -19
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+            end
             object sEdit_Text6: TsEdit_Text
               Left = 137
               Top = 88
@@ -1227,10 +1310,10 @@ inherited FCidadao: TFCidadao
     end
   end
   inherited sCoolBar1: TsPanel
-    Width = 1033
+    Width = 795
     ExplicitWidth = 1033
     inherited pnFechar: TsSpeedButton
-      Left = 962
+      Left = 724
       ExplicitLeft = 1124
     end
   end

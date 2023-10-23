@@ -3,13 +3,8 @@ inherited FCidadao: TFCidadao
   ClientHeight = 507
   ClientWidth = 805
   OnShow = FormShow
-<<<<<<< HEAD
-  ExplicitWidth = 1049
-  ExplicitHeight = 580
-=======
   ExplicitWidth = 811
   ExplicitHeight = 536
->>>>>>> release/1.1
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage
@@ -19,34 +14,34 @@ inherited FCidadao: TFCidadao
   inherited PageControl1: TPageControl
     Width = 805
     Height = 431
-    ExplicitWidth = 1043
+    ExplicitWidth = 805
+    ExplicitHeight = 431
     inherited Localizar: TTabSheet
-      ExplicitWidth = 1035
+      ExplicitWidth = 797
+      ExplicitHeight = 421
       inherited sFrameBar1: TsFrameBar
         Width = 797
         Height = 421
-        ExplicitWidth = 1035
+        ExplicitWidth = 797
+        ExplicitHeight = 421
       end
     end
     inherited Texto: TTabSheet
       ExplicitLeft = 4
       ExplicitTop = 6
-      ExplicitWidth = 1035
-      ExplicitHeight = 465
+      ExplicitWidth = 797
+      ExplicitHeight = 421
       inherited ScrollBox1: TScrollBox
         Width = 797
         Height = 421
-        ExplicitWidth = 1035
+        ExplicitWidth = 797
+        ExplicitHeight = 421
         object PageControl2: TPageControl
           Left = 6
           Top = 72
           Width = 750
           Height = 342
-<<<<<<< HEAD
-          ActivePage = TabSheet2
-=======
-          ActivePage = TabSheet1
->>>>>>> release/1.1
+          ActivePage = TabSheet5
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'
@@ -358,7 +353,6 @@ inherited FCidadao: TFCidadao
           object TabSheet2: TTabSheet
             Caption = 'Cadastro de Solicita'#231#227'o'
             ImageIndex = 1
-            ExplicitLeft = 0
             object Label9: TLabel
               Left = 191
               Top = 13
@@ -1311,7 +1305,7 @@ inherited FCidadao: TFCidadao
   end
   inherited sCoolBar1: TsPanel
     Width = 795
-    ExplicitWidth = 1033
+    ExplicitWidth = 795
     inherited pnFechar: TsSpeedButton
       Left = 724
       ExplicitLeft = 1124

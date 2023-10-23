@@ -33,7 +33,19 @@ inherited FCidadao: TFCidadao
           Top = 72
           Width = 750
           Height = 342
+<<<<<<< HEAD
+<<<<<<<< HEAD:__history/uCidadao.dfm.~28~
           ActivePage = TabSheet1
+========
+          ActivePage = TabSheet3
+>>>>>>>> release/1.1:__history/uCidadao.dfm.~29~
+=======
+<<<<<<<< HEAD:__history/uCidadao.dfm.~29~
+          ActivePage = TabSheet2
+========
+          ActivePage = TabSheet1
+>>>>>>>> release/1.1:__history/uCidadao.dfm.~28~
+>>>>>>> release/1.1
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'
@@ -644,7 +656,10 @@ inherited FCidadao: TFCidadao
               Font.Style = []
               ParentFont = False
               TabOrder = 0
+<<<<<<< HEAD
+=======
               OnClick = Button1Click
+>>>>>>> release/1.1
             end
             object Memo3: TMemo
               Left = 40

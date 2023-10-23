@@ -3,8 +3,13 @@ inherited FCidadao: TFCidadao
   ClientHeight = 507
   ClientWidth = 805
   OnShow = FormShow
+<<<<<<< HEAD
+  ExplicitWidth = 1049
+  ExplicitHeight = 580
+=======
   ExplicitWidth = 811
   ExplicitHeight = 536
+>>>>>>> release/1.1
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage
@@ -37,7 +42,11 @@ inherited FCidadao: TFCidadao
           Top = 72
           Width = 750
           Height = 342
+<<<<<<< HEAD
+          ActivePage = TabSheet2
+=======
           ActivePage = TabSheet1
+>>>>>>> release/1.1
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'

@@ -133,7 +133,11 @@ begin
   Sp_Stored.ProcedureName := 'STB_CADASTRO_SOLICITACAO';
   Sp_Stored.Parameters.Refresh;
 
+<<<<<<<< HEAD:__history/uCidadao.pas.~35~
+ //Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
+========
   Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
+>>>>>>>> release/1.1:__history/uCidadao.pas.~36~
   Sp_Stored.Parameters.ParamByName('@CPF_AGENTE').Value := sEdit_Text11.Text;
   Sp_Stored.Parameters.ParamByName('@TIPO_SOLICITACAO').Value := sEdit_Text7.Text;
   Sp_Stored.Parameters.ParamByName('@OBSERVACAO').Value := Memo2.Text;
@@ -196,8 +200,33 @@ begin
   Sp_Stored.Parameters.ParamByName('@DESCRICAO_MOTIVO').Value := Memo3.Text;
   Sp_Stored.ExecProc;
 
+<<<<<<<< HEAD:__history/uCidadao.pas.~35~
+end;
+========
   ShowMessage('Motivo cadastrado com sucesso!');
+>>>>>>>> release/1.1:__history/uCidadao.pas.~36~
 
+procedure TFCidadao.carregar_combo_box;
+begin
+  inherited;
+       sCombo_Box2.Clear;
+
+
+    Sp_Stored.Close;
+    Sp_Stored.ProcedureName:='stb_localizar_id';
+
+    Sp_Stored.Parameters.Refresh;
+    Sp_Stored.Open;
+
+    while not Sp_Stored.Eof do  // enquanto não chegou ao fim, processa
+                               // propriedade é um boolean q quando é igual a true significa que o DataSet está posicionado no final
+begin
+
+    sCombo_Box2.Items.Add(Sp_Stored.FieldByName('ID_SOLICITACAO').AsString);
+    Sp_Stored.Next;
+
+end;
+ sCombo_Box2.ItemIndex := -1;
 end;
 
 procedure TFCidadao.carregar_combo_box;
@@ -227,7 +256,10 @@ procedure TFCidadao.FormShow(Sender: TObject);
 begin
   inherited;
     carregar_combo_box();
+<<<<<<<< HEAD:__history/uCidadao.pas.~35~
+========
     carregar_combo_box_id_motivo();
+>>>>>>>> release/1.1:__history/uCidadao.pas.~36~
     Carregar_grid_monitoramento();
     PageControl2.ActivePageIndex := 0;
 end;
@@ -256,6 +288,11 @@ begin
 end;
  sCombo_Box1.ItemIndex := -1;
 end;
+<<<<<<<< HEAD:__history/uCidadao.pas.~35~
+end;
+
+========
+>>>>>>>> release/1.1:__history/uCidadao.pas.~36~
 
 
 procedure TFCidadao.sCombo_Box2Change(Sender: TObject);

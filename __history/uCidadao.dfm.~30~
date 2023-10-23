@@ -3,7 +3,10 @@ inherited FCidadao: TFCidadao
   ClientWidth = 1043
   OnShow = FormShow
   ExplicitWidth = 1049
+<<<<<<<< HEAD:__history/uCidadao.dfm.~27~
+========
   ExplicitHeight = 580
+>>>>>>>> release/1.1:__history/uCidadao.dfm.~30~
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage
@@ -21,10 +24,14 @@ inherited FCidadao: TFCidadao
       end
     end
     inherited Texto: TTabSheet
+<<<<<<<< HEAD:__history/uCidadao.dfm.~27~
+      ExplicitWidth = 1035
+========
       ExplicitLeft = 4
       ExplicitTop = 6
       ExplicitWidth = 1035
       ExplicitHeight = 465
+>>>>>>>> release/1.1:__history/uCidadao.dfm.~30~
       inherited ScrollBox1: TScrollBox
         Width = 1035
         ExplicitWidth = 1035
@@ -33,7 +40,11 @@ inherited FCidadao: TFCidadao
           Top = 72
           Width = 750
           Height = 342
+<<<<<<<< HEAD:__history/uCidadao.dfm.~27~
+          ActivePage = TabSheet6
+========
           ActivePage = TabSheet2
+>>>>>>>> release/1.1:__history/uCidadao.dfm.~30~
           TabOrder = 0
           object TabSheet1: TTabSheet
             Caption = 'Cadastro Agente'
@@ -644,7 +655,6 @@ inherited FCidadao: TFCidadao
               Font.Style = []
               ParentFont = False
               TabOrder = 0
-              OnClick = Button1Click
             end
             object Memo3: TMemo
               Left = 40

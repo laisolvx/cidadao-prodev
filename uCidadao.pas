@@ -76,6 +76,9 @@ type
     Label25: TLabel;
     Label26: TLabel;
     ADO_LOCALIZAR: TADOQuery;
+    Label27: TLabel;
+    Label28: TLabel;
+    sCombo_Box3: TsCombo_Box;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
@@ -136,6 +139,7 @@ begin
   Sp_Stored.Parameters.ParamByName('@ID_MOTIVO').Value := sCombo_Box1.Text;
   Sp_Stored.Parameters.ParamByName('@CPF_AGENTE').Value := sEdit_Text11.Text;
   Sp_Stored.Parameters.ParamByName('@TIPO_SOLICITACAO').Value := sEdit_Text7.Text;
+  Sp_Stored.Parameters.ParamByName('@STATUS').Value := sCombo_Box3.Text;
   Sp_Stored.Parameters.ParamByName('@OBSERVACAO').Value := Memo2.Text;
   Sp_Stored.Parameters.ParamByName('@DATA_SOLICITACAO').Value := sEdit_Text9.Text;
 
